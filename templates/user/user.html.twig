@@ -14,14 +14,18 @@
                 <li><a href="{{ path('acceuil') }}">Acceuil</a></li>
                 <li><a href="{{ path('a-propos') }}">À propos</a></li>
                 <li><a href="{{ path('contact') }}">Contact</a></li>
-                <li><a href="{{ path('user') }}">Utilisateurs</a></li>
             </ul>
         </nav>
     </header>
 
-
-    <h1>Acceuil </h1>
-
+    <ul>
+        {% for utilisateur in utilisateurs_tab  %}
+        <li><p><strong>{{ utilisateur.name }}</strong></p>
+            <p>{{ utilisateur.email }}</p>
+            <p>{{ utilisateur.work }}</p>
+        </li>
+        {% endfor %}
+    </ul>
 
 
     <footer>

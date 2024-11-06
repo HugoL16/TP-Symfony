@@ -11,5 +11,6 @@ class HomeController extends AbstractController
     public function number(): Response
     {
         return $this->render('pages/accueil.html.twig');
+        
     }
 }
